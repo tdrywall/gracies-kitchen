@@ -6,222 +6,339 @@
 <title>Gracie's Kitchen · Small-batch Biscoff tiramisu, Toronto</title>
 <meta name="description" content="Small-batch Biscoff tiramisu made fresh in Toronto. $8 a cup, 2 for $15. Order on Instagram @greycie_kitchen for pickup on Yonge St.">
 <meta name="theme-color" content="#4a2c1c">
+<link rel="canonical" href="https://tdrywall.github.io/gracies-kitchen/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Gracie's Kitchen">
 <meta property="og:title" content="Gracie's Kitchen">
 <meta property="og:description" content="Small-batch Biscoff tiramisu, made fresh in Toronto. $8 a cup, 2 for $15.">
-<meta property="og:image" content="https://tdrywall.github.io/gracies-kitchen/og.png">
 <meta property="og:url" content="https://tdrywall.github.io/gracies-kitchen/">
-<link rel="canonical" href="https://tdrywall.github.io/gracies-kitchen/">
+<meta property="og:image" content="https://tdrywall.github.io/gracies-kitchen/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Bakery","name":"Gracie's Kitchen","description":"Small-batch Biscoff tiramisu, made fresh in Toronto.","areaServed":"Toronto, ON","priceRange":"$","servesCuisine":"Desserts","url":"https://tdrywall.github.io/gracies-kitchen/","image":"https://tdrywall.github.io/gracies-kitchen/og.png","sameAs":["https://www.instagram.com/greycie_kitchen/"],"paymentAccepted":"Cash, Debit, Visa, Mastercard, American Express"}
+{"@context":"https://schema.org","@type":"Bakery","name":"Gracie's Kitchen","url":"https://tdrywall.github.io/gracies-kitchen/","image":"https://tdrywall.github.io/gracies-kitchen/og.png","description":"Small-batch Biscoff tiramisu, made fresh in Toronto.","areaServed":"Toronto, ON","priceRange":"$","servesCuisine":"Desserts","sameAs":["https://www.instagram.com/greycie_kitchen/"],"paymentAccepted":"Cash, Debit, Visa, Mastercard, American Express","hasMenu":{"@type":"Menu","hasMenuSection":{"@type":"MenuSection","name":"Desserts","hasMenuItem":{"@type":"MenuItem","name":"Biscoff Crémé","description":"Biscoff tiramisu: mascarpone cream, ladyfingers and Biscoff cookie. 5 oz cup.","offers":{"@type":"Offer","price":"8.00","priceCurrency":"CAD"}}}}}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Figtree:wght@400;600;700;800&display=swap">
 <style>
-/* Layout: one narrow column, a cup stage beside the product name on wide screens, stacked on phones. */
+/* Layout: sticky brand bar; one 1080px column; hero splits text | cup on wide screens and stacks on phones. */
 :root {
   --surface: #fbf5ec; --raised: #ffffff; --sunk: #f2e7d8; --line: #e3d3bf;
-  --ink: #2a1a12; --muted: #6b5546; --cocoa: #4a2c1c; --on-cocoa: #fff3e6;
+  --ink: #2a1a12; --muted: #6b5546; --cocoa: #4a2c1c; --on-cocoa: #fff3e6; --on-cocoa-muted: #d6bfa9;
   --caramel: #a84d17; --on-caramel: #fffaf3; --mascarpone: #f5e3c3; --focus: #1d6a86;
-  --glass-edge: #c4ab92; --cup: #ffffff;
+  --glass-edge: #c4ab92; --cup: #ffffff; --bar: rgba(251,245,236,0.92);
   --l-biscoff: #b8742f; --l-creme: #ecd3ad; --l-lady: #e6c27f;
   --display: "Fraunces", "Iowan Old Style", Georgia, serif;
   --sans: "Figtree", "Segoe UI", system-ui, sans-serif;
   --shadow: 0 1px 2px rgba(58,35,24,0.06), 0 4px 14px rgba(58,35,24,0.07);
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root {
     --surface: #1b1411; --raised: #261c17; --sunk: #130e0b; --line: #3e3029;
-    --ink: #f6ece0; --muted: #bfa996; --cocoa: #e7c9ae; --on-cocoa: #1b1411;
+    --ink: #f6ece0; --muted: #bfa996; --cocoa: #e7c9ae; --on-cocoa: #1b1411; --on-cocoa-muted: #4a3a2a;
     --caramel: #f2a46b; --on-caramel: #1b1411; --mascarpone: #4a3a2a; --focus: #7cc6df;
-    --glass-edge: #6a564a; --cup: rgba(255,255,255,0.08);
+    --glass-edge: #6a564a; --cup: rgba(255,255,255,0.08); --bar: rgba(27,20,17,0.92);
     --shadow: 0 1px 2px rgba(0,0,0,0.45), 0 4px 14px rgba(0,0,0,0.3);
     color-scheme: dark;
   }
 }
-:root[data-theme="dark"] {
-  --surface: #1b1411; --raised: #261c17; --sunk: #130e0b; --line: #3e3029;
-  --ink: #f6ece0; --muted: #bfa996; --cocoa: #e7c9ae; --on-cocoa: #1b1411;
-  --caramel: #f2a46b; --on-caramel: #1b1411; --mascarpone: #4a3a2a; --focus: #7cc6df;
-  --glass-edge: #6a564a; --cup: rgba(255,255,255,0.08);
-  --shadow: 0 1px 2px rgba(0,0,0,0.45), 0 4px 14px rgba(0,0,0,0.3);
-  color-scheme: dark;
-}
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 img { max-width: 100%; }
-html, body { margin: 0; }
-body {
-  background: var(--surface); color: var(--ink); font-family: var(--sans);
-  font-size: 17px; line-height: 1.6;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
-  -webkit-font-smoothing: antialiased;
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-.wrap { max-width: 760px; margin: 0 auto; padding-block: 28px 56px; display: flex; flex-direction: column; gap: 56px; }
-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px 16px; border-bottom: 2px solid var(--cocoa); padding-bottom: 14px; }
-.brand { font-family: var(--display); font-weight: 600; font-size: 28px; line-height: 1.2; color: var(--cocoa); }
-.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
-h1, h2 { font-family: var(--display); font-weight: 700; letter-spacing: -0.015em; text-wrap: balance; margin: 0; }
-h1 { font-size: clamp(48px, 11vw, 76px); line-height: 1; }
-h2 { font-size: clamp(28px, 6vw, 36px); line-height: 1.15; }
-p { margin: 0; max-width: 62ch; text-wrap: pretty; }
-.hero { display: flex; flex-wrap: wrap; gap: 32px; align-items: center; }
-.hero-text { flex: 999 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
-.lead { font-size: 20px; line-height: 1.55; }
-.muted { color: var(--muted); }
-.stage { flex: 1 1 200px; max-width: 260px; aspect-ratio: 5 / 7; background: var(--mascarpone); border-radius: 22px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 12%; }
-.cup { width: 66%; height: 70%; border: 4px solid var(--glass-edge); border-top-width: 6px; border-radius: 6px 6px 28px 28px; overflow: hidden; display: flex; flex-direction: column; background: var(--cup); }
-.cup span { display: block; }
-.prices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.price { border-radius: 22px; padding: 22px 24px; display: flex; flex-direction: column; background: var(--raised); box-shadow: var(--shadow); }
-.price.deal { background: var(--cocoa); color: var(--on-cocoa); box-shadow: none; }
-.price b { font-family: var(--display); font-size: clamp(48px, 12vw, 64px); line-height: 1.05; font-weight: 700; font-variant-numeric: tabular-nums; }
-.price span { font-weight: 700; font-size: 17px; }
-.price:not(.deal) span { color: var(--muted); }
-.note { font-size: 15px; color: var(--muted); margin-top: 10px; }
-section { display: flex; flex-direction: column; gap: 18px; }
-ol.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; counter-reset: s; }
-ol.steps li { counter-increment: s; display: flex; gap: 16px; align-items: center; background: var(--raised); border-radius: 14px; padding: 14px 18px; box-shadow: var(--shadow); }
-ol.steps li::before { content: counter(s); flex: 0 0 40px; height: 40px; border-radius: 50%; background: var(--cocoa); color: var(--on-cocoa); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 700; font-size: 20px; }
-.actions { display: flex; flex-wrap: wrap; gap: 10px; }
-.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; border-radius: 999px; font-weight: 700; font-size: 17px; text-decoration: none; border: 2px solid var(--caramel); }
+html { scroll-behavior: smooth; scroll-padding-top: calc(72px + env(safe-area-inset-top, 0px)); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--surface); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; padding-bottom: env(safe-area-inset-bottom, 0px); }
+a { color: var(--caramel); }
+.inner { max-width: 1080px; margin: 0 auto; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+
+/* Brand bar */
+.bar { position: sticky; top: 0; z-index: 10; background: var(--bar); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); padding-top: env(safe-area-inset-top, 0px); }
+.bar .inner { display: flex; align-items: center; gap: 16px; min-height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--cocoa); font-family: var(--display); font-weight: 600; font-size: 22px; line-height: 1; margin-right: auto; }
+.brand svg { flex: 0 0 34px; }
+.nav { display: flex; gap: 4px; }
+.nav a { color: var(--ink); text-decoration: none; font-weight: 700; font-size: 15px; padding: 10px 12px; border-radius: 999px; }
+.nav a:hover { background: var(--sunk); }
+@media (max-width: 760px) { .nav { display: none; } }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; border-radius: 999px; font-weight: 800; font-size: 16px; text-decoration: none; border: 2px solid var(--caramel); white-space: nowrap; }
 .btn.primary { background: var(--caramel); color: var(--on-caramel); }
 .btn.quiet { background: transparent; color: var(--caramel); }
-.btn:focus-visible, summary:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
-.handle { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 15px; color: var(--muted); }
-.handle code { font-family: var(--sans); font-weight: 700; color: var(--ink); user-select: all; }
-.handle button { font: inherit; font-weight: 700; color: var(--caramel); background: none; border: 0; padding: 4px 6px; cursor: pointer; min-height: 32px; }
-.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
-.fact { border-top: 2px solid var(--line); padding-top: 12px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
-.fact strong { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-.allergen { background: var(--sunk); border-radius: 14px; padding: 16px 18px; font-weight: 700; }
-details { border-bottom: 1px solid var(--line); }
-details:first-of-type { border-top: 1px solid var(--line); }
-summary { cursor: pointer; list-style: none; padding: 14px 32px 14px 0; font-weight: 700; position: relative; min-height: 48px; display: flex; align-items: center; }
-summary::-webkit-details-marker { display: none; }
-summary::after { content: "+"; position: absolute; right: 4px; font-size: 24px; color: var(--caramel); font-weight: 600; }
-details[open] summary::after { content: "–"; }
-details p { padding: 0 0 16px; color: var(--muted); }
-.links { display: flex; flex-direction: column; gap: 10px; }
-.link { display: flex; flex-direction: column; gap: 2px; min-height: 64px; justify-content: center; padding: 12px 22px; border-radius: 14px; background: var(--raised); color: var(--ink); text-decoration: none; box-shadow: var(--shadow); border: 2px solid transparent; }
-.link span { font-weight: 800; font-size: 18px; line-height: 1.3; }
-.link small { font-size: 14px; color: var(--muted); line-height: 1.3; }
-.link:hover { border-color: var(--caramel); }
-.link.primary { background: var(--caramel); color: var(--on-caramel); box-shadow: none; }
-.link.primary small { color: var(--on-caramel); opacity: 0.9; }
-.link:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
-.popup { background: var(--cocoa); color: var(--on-cocoa); border-radius: 22px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px; }
-.popup-title { font-family: var(--display); font-weight: 700; font-size: 32px; line-height: 1.15; }
-html { scroll-behavior: smooth; }
-footer { border-top: 2px solid var(--cocoa); padding-top: 16px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 15px; color: var(--muted); }
+.btn.small { min-height: 42px; padding: 0 18px; font-size: 15px; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+/* Type */
+h1, h2, h3 { font-family: var(--display); font-weight: 700; letter-spacing: -0.015em; text-wrap: balance; margin: 0; color: var(--ink); }
+h1 { font-size: clamp(46px, 9vw, 84px); line-height: 1; }
+h2 { font-size: clamp(30px, 5vw, 44px); line-height: 1.1; }
+h3 { font-size: 22px; line-height: 1.25; }
+p { margin: 0; max-width: 62ch; text-wrap: pretty; }
+.eyebrow { font-size: 13px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--caramel); }
+.muted { color: var(--muted); }
+.lead { font-size: clamp(18px, 2.4vw, 21px); line-height: 1.55; }
+
+/* Sections */
+section { padding-block: clamp(48px, 8vw, 88px); }
+section + section { border-top: 1px solid var(--line); }
+.sec-head { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+
+/* Hero */
+.hero { padding-block: clamp(36px, 7vw, 80px); }
+.hero .inner { display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 56px); align-items: center; }
+.hero-text { flex: 999 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 10px; }
+.pricechip { display: inline-flex; align-self: flex-start; gap: 10px; align-items: baseline; background: var(--cocoa); color: var(--on-cocoa); border-radius: 999px; padding: 8px 18px; font-weight: 800; font-size: 16px; }
+.stage { flex: 1 1 240px; max-width: 340px; margin-inline: auto; aspect-ratio: 5 / 7; background: var(--mascarpone); border-radius: 28px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 12%; }
+.cup { width: 64%; height: 70%; border: 5px solid var(--glass-edge); border-top-width: 7px; border-radius: 7px 7px 34px 34px; overflow: hidden; display: flex; flex-direction: column; background: var(--cup); }
+.cup span { display: block; }
 @media (prefers-reduced-motion: no-preference) {
-  .cup span { animation: pour .5s ease-out both; transform-origin: bottom; }
+  .cup span { animation: pour .6s ease-out both; transform-origin: bottom; }
   .cup span:nth-child(5) { animation-delay: .05s } .cup span:nth-child(4) { animation-delay: .15s }
   .cup span:nth-child(3) { animation-delay: .25s } .cup span:nth-child(2) { animation-delay: .35s }
   @keyframes pour { from { transform: scaleY(0.6); } to { transform: none; } }
 }
+
+/* Menu */
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 16px; }
+.card { background: var(--raised); border-radius: 22px; padding: 26px 28px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.card.feature { grid-column: 1 / -1; }
+.item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+.item-price { font-family: var(--display); font-weight: 700; font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.layers { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.layers li { display: flex; align-items: center; gap: 10px; font-size: 16px; }
+.swatch { flex: 0 0 18px; height: 18px; border-radius: 5px; border: 1px solid var(--line); }
+.deal.card { flex-direction: row; }
+.deal { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; background: var(--cocoa); color: var(--on-cocoa); border-radius: 22px; padding: 22px 28px; }
+.deal strong { font-family: var(--display); font-size: clamp(30px, 5vw, 40px); line-height: 1.05; }
+.tag { display: inline-flex; align-self: flex-start; font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; background: var(--sunk); color: var(--muted); }
+
+/* Steps */
+ol.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px; counter-reset: s; }
+ol.steps li { counter-increment: s; background: var(--raised); border-radius: 18px; padding: 22px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 8px; }
+ol.steps li::before { content: counter(s); width: 40px; height: 40px; border-radius: 50%; background: var(--cocoa); color: var(--on-cocoa); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 700; font-size: 20px; }
+ol.steps b { font-size: 18px; }
+.after-steps { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; }
+.handle { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; color: var(--muted); }
+.handle code { font-family: var(--sans); font-weight: 800; color: var(--ink); user-select: all; }
+.handle button { font: inherit; font-weight: 800; color: var(--caramel); background: none; border: 0; padding: 6px 8px; cursor: pointer; min-height: 36px; border-radius: 8px; }
+
+/* Facts grid */
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 24px; }
+.fact { border-top: 2px solid var(--cocoa); padding-top: 14px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.allergen { margin-top: 24px; background: var(--sunk); border-radius: 16px; padding: 18px 20px; font-weight: 700; }
+
+/* Story */
+.story { display: flex; flex-wrap: wrap; gap: clamp(24px, 5vw, 56px); align-items: center; }
+.story-text { flex: 999 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.story-mark { flex: 1 1 200px; max-width: 260px; margin-inline: auto; }
+
+/* FAQ */
+.faq details { border-bottom: 1px solid var(--line); }
+.faq details:first-child { border-top: 1px solid var(--line); }
+.faq summary { cursor: pointer; list-style: none; padding: 16px 40px 16px 0; font-weight: 800; position: relative; min-height: 52px; display: flex; align-items: center; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 6px; font-size: 26px; color: var(--caramel); font-weight: 600; }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { padding: 0 0 18px; color: var(--muted); }
+
+/* Final CTA + footer */
+.cta-band { background: var(--cocoa); color: var(--on-cocoa); }
+.cta-band .inner { padding-block: clamp(44px, 7vw, 72px); display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; }
+.cta-band h2 { color: var(--on-cocoa); }
+.cta-band p { color: var(--on-cocoa-muted); }
+.cta-band .btn.primary { background: var(--on-cocoa); color: var(--cocoa); border-color: var(--on-cocoa); }
+footer .inner { padding-block: 28px 36px; display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; font-size: 15px; color: var(--muted); }
+footer a { color: var(--muted); font-weight: 700; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="brand">Gracie's Kitchen</div>
-    <div class="eyebrow">Small batches · Toronto</div>
-  </header>
 
-  <nav class="links" aria-label="Gracie's Kitchen links">
-    <a class="link primary" href="https://ig.me/m/greycie_kitchen" target="_blank" rel="noopener"><span>Order now</span><small>Message us on Instagram</small></a>
-    <a class="link" href="https://www.instagram.com/greycie_kitchen/" target="_blank" rel="noopener"><span>Follow @greycie_kitchen</span><small>Pop-up dates and new flavours</small></a>
-    <a class="link" href="#menu"><span>Menu and prices</span><small>$8 a cup · 2 for $15</small></a>
-    <a class="link" href="#where"><span>Where to find us</span><small>Pop-ups and pickup on Yonge St</small></a>
-    <a class="link" href="#ingredients"><span>Ingredients and allergens</span><small>Milk, egg, wheat, soy</small></a>
-    <a class="link" href="#faq"><span>Questions</span><small>Gluten, halal, storage, catering</small></a>
-  </nav>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="#top" aria-label="Gracie's Kitchen, back to top">
+      <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="32" fill="#4a2c1c"/><circle cx="32" cy="32" r="25" fill="none" stroke="#f2a46b" stroke-width="3"/><text x="32" y="41" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="24" fill="#fff3e6" letter-spacing="-1">GK</text></svg>
+      Gracie's Kitchen
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#menu">Menu</a>
+      <a href="#order">Order</a>
+      <a href="#find">Find us</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn primary small" href="https://ig.me/m/greycie_kitchen" target="_blank" rel="noopener">Order</a>
+  </div>
+</header>
 
-  <div class="hero" id="menu">
-    <div class="hero-text">
-      <div class="eyebrow" style="color: var(--caramel)">On the menu</div>
-      <h1>Biscoff Crémé</h1>
-      <p class="lead">Our Biscoff tiramisu: whipped mascarpone cream over ladyfingers, layered with Biscoff cookie. Made fresh, in small batches.</p>
-      <p class="muted">5 oz cup. No coffee, no alcohol.</p>
-    </div>
-    <div class="stage" aria-hidden="true">
-      <div class="cup">
-        <span style="height: 9%"></span>
-        <span style="height: 11%; background: var(--l-biscoff)"></span>
-        <span style="height: 26%; background: var(--l-creme)"></span>
-        <span style="height: 6%; background: var(--l-biscoff)"></span>
-        <span style="height: 24%; background: var(--l-creme)"></span>
-        <span style="flex: 1 1 auto; background: var(--l-lady)"></span>
+<main id="top">
+  <div class="hero">
+    <div class="inner">
+      <div class="hero-text">
+        <div class="eyebrow">Small batches · Toronto</div>
+        <h1>Biscoff tiramisu, made fresh.</h1>
+        <p class="lead">Whipped mascarpone cream over ladyfingers, layered with Biscoff cookie. Made by hand in our kitchen above Yonge St and sold in small batches.</p>
+        <div class="pricechip">$8 a cup <span aria-hidden="true">·</span> 2 for $15</div>
+        <div class="hero-cta">
+          <a class="btn primary" href="https://ig.me/m/greycie_kitchen" target="_blank" rel="noopener">Order on Instagram</a>
+          <a class="btn quiet" href="#menu">See the menu</a>
+        </div>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <div class="cup">
+          <span style="height: 9%"></span>
+          <span style="height: 11%; background: var(--l-biscoff)"></span>
+          <span style="height: 26%; background: var(--l-creme)"></span>
+          <span style="height: 6%; background: var(--l-biscoff)"></span>
+          <span style="height: 24%; background: var(--l-creme)"></span>
+          <span style="flex: 1 1 auto; background: var(--l-lady)"></span>
+        </div>
       </div>
     </div>
   </div>
 
-  <section aria-labelledby="price-h">
-    <h2 id="price-h" class="eyebrow" style="font-family: var(--sans); font-size: 13px; letter-spacing: 0.12em">Price</h2>
-    <div class="prices">
-      <div class="price"><b>$8</b><span>a cup</span></div>
-      <div class="price deal"><b>$15</b><span>for 2 cups</span></div>
-    </div>
-    <p class="note">Cash, debit, Visa, Mastercard or American Express.</p>
-  </section>
-
-  <section aria-labelledby="order-h">
-    <h2 id="order-h">How to order</h2>
-    <ol class="steps">
-      <li>Message us on Instagram with your name.</li>
-      <li>Tell us how many cups and the day you'd like them.</li>
-      <li>We confirm a pickup time on Yonge St. Pay when you pick up.</li>
-    </ol>
-    <div class="actions">
-      <a class="btn primary" href="https://ig.me/m/greycie_kitchen" target="_blank" rel="noopener">Message us to order</a>
-      <a class="btn quiet" href="https://instagram.com/greycie_kitchen" target="_blank" rel="noopener">Follow on Instagram</a>
-    </div>
-    <div class="handle">Instagram: <code id="ig-handle">@greycie_kitchen</code> <button type="button" id="copy-handle">Copy</button><span id="copy-status" aria-live="polite"></span></div>
-  </section>
-
-  <section aria-labelledby="where-h" id="where">
-    <h2 id="where-h">Where to find us</h2>
-    <p>We don't have a storefront. Everything is made fresh in our kitchen above Yonge St and sold at pop-ups or for pickup.</p>
-    <div class="facts">
-      <div class="fact"><strong>Pop-ups</strong><span>Posted on Instagram before each one.</span></div>
-      <div class="fact"><strong>Pickup</strong><span>On Yonge St, Toronto. We send the exact spot when we confirm your order.</span></div>
-      <div class="fact"><strong>Large orders</strong><span>Message us the date and how many people.</span></div>
-    </div>
-  </section>
-
-  <section aria-labelledby="in-h" id="ingredients">
-    <h2 id="in-h">What's in it</h2>
-    <p>Mascarpone, eggs, Biscoff cookies, sugar, ladyfingers and Biscoff spread.</p>
-    <div class="allergen">Contains milk, egg, wheat and soy. Made with raw eggs. No nuts in our kitchen.</div>
-  </section>
-
-  <section aria-labelledby="faq-h" id="faq">
-    <h2 id="faq-h">Questions</h2>
-    <div>
-      <details><summary>Is it gluten-free?</summary><p>No. The ladyfingers and Biscoff contain wheat.</p></details>
-      <details><summary>Is it vegetarian? Halal?</summary><p>It's vegetarian, with no gelatin. No pork and no alcohol, but it isn't halal-certified.</p></details>
-      <details><summary>How long does it keep?</summary><p>Keep it in the fridge and enjoy it within 2 days.</p></details>
-      <details><summary>Do you deliver?</summary><p>Message us on Instagram and we'll work out pickup or delivery.</p></details>
-      <details><summary>Do you make anything else?</summary><p>Yes, samosas too, and more on the way. Follow us to see what's next.</p></details>
-      <details><summary>Who's Gracie?</summary><p>She's the inspiration, and the real boss of the kitchen.</p></details>
+  <section id="menu" aria-labelledby="menu-h">
+    <div class="inner">
+      <div class="sec-head">
+        <div class="eyebrow">Menu</div>
+        <h2 id="menu-h">One dessert, done properly.</h2>
+      </div>
+      <div class="menu-grid">
+        <article class="card feature">
+          <div class="item-head">
+            <h3>Biscoff Crémé</h3>
+            <span class="item-price">$8</span>
+          </div>
+          <p>Our Biscoff tiramisu in a 5 oz cup. No coffee and no alcohol, so it's for everyone.</p>
+          <ul class="layers" aria-label="What's in each cup, top to bottom">
+            <li><span class="swatch" style="background: var(--l-biscoff)"></span>Biscoff cookie</li>
+            <li><span class="swatch" style="background: var(--l-creme)"></span>Mascarpone cream with Biscoff spread</li>
+            <li><span class="swatch" style="background: var(--l-biscoff)"></span>Biscoff cookie</li>
+            <li><span class="swatch" style="background: var(--l-creme)"></span>Mascarpone cream</li>
+            <li><span class="swatch" style="background: var(--l-lady)"></span>Ladyfingers</li>
+          </ul>
+        </article>
+        <div class="deal card feature" style="background: var(--cocoa); box-shadow: none">
+          <strong>2 cups for $15</strong>
+          <a class="btn primary" style="background: var(--on-cocoa); color: var(--cocoa); border-color: var(--on-cocoa)" href="https://ig.me/m/greycie_kitchen" target="_blank" rel="noopener">Order two</a>
+        </div>
+        <article class="card">
+          <span class="tag">Ask us</span>
+          <h3>Samosas</h3>
+          <p class="muted">We make samosas too. Message us to ask when the next batch is.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Coming</span>
+          <h3>More flavours</h3>
+          <p class="muted">New desserts are on the way. Follow us to hear first.</p>
+        </article>
+      </div>
+      <p class="muted" style="margin-top: 20px; font-size: 15px">Cash, debit, Visa, Mastercard and American Express. Prices in Canadian dollars.</p>
     </div>
   </section>
 
-  <footer>
-    <span>Gracie's Kitchen · Toronto</span>
-    <span>@greycie_kitchen</span>
-  </footer>
+  <section id="order" aria-labelledby="order-h">
+    <div class="inner">
+      <div class="sec-head">
+        <div class="eyebrow">How to order</div>
+        <h2 id="order-h">Order in one message.</h2>
+      </div>
+      <ol class="steps">
+        <li><b>Message us on Instagram</b><span class="muted">Send your name to @greycie_kitchen.</span></li>
+        <li><b>Say how many and when</b><span class="muted">How many cups, and the day you'd like them.</span></li>
+        <li><b>Pick up on Yonge St</b><span class="muted">We confirm a time and spot. Pay when you pick up.</span></li>
+      </ol>
+      <div class="after-steps">
+        <a class="btn primary" href="https://ig.me/m/greycie_kitchen" target="_blank" rel="noopener">Message us to order</a>
+        <span class="handle">Instagram: <code id="ig-handle">@greycie_kitchen</code><button type="button" id="copy-handle">Copy</button><span id="copy-status" aria-live="polite"></span></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="find" aria-labelledby="find-h">
+    <div class="inner">
+      <div class="sec-head">
+        <div class="eyebrow">Where to find us</div>
+        <h2 id="find-h">No storefront. Just fresh batches.</h2>
+        <p class="lead muted">Everything is made in our kitchen above Yonge St and sold at pop-ups or for pickup.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><h3>Pop-ups</h3><p class="muted">Dates and spots are posted on Instagram before each one. Free samples while they last.</p></div>
+        <div class="fact"><h3>Pickup</h3><p class="muted">On Yonge St, Toronto. We send the exact spot when we confirm your order.</p></div>
+        <div class="fact"><h3>Delivery</h3><p class="muted">Message us and we'll work out pickup or delivery for your order.</p></div>
+        <div class="fact"><h3>Large orders</h3><p class="muted">Parties, offices, events. Send the date and how many people and we'll quote you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ingredients" aria-labelledby="ing-h">
+    <div class="inner">
+      <div class="sec-head">
+        <div class="eyebrow">Ingredients</div>
+        <h2 id="ing-h">What's in it.</h2>
+      </div>
+      <p class="lead">Mascarpone, eggs, Biscoff cookies, sugar, ladyfingers and Biscoff spread.</p>
+      <div class="allergen">Contains milk, egg, wheat and soy. Made with raw eggs. No nuts in our kitchen.</div>
+      <div class="facts" style="margin-top: 28px">
+        <div class="fact"><h3>Vegetarian</h3><p class="muted">No gelatin. No pork and no alcohol, but not halal-certified.</p></div>
+        <div class="fact"><h3>Not gluten-free</h3><p class="muted">The ladyfingers and Biscoff contain wheat.</p></div>
+        <div class="fact"><h3>Keep it cold</h3><p class="muted">Refrigerate and enjoy within 2 days.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" aria-labelledby="story-h">
+    <div class="inner story">
+      <div class="story-text">
+        <div class="eyebrow">Our story</div>
+        <h2 id="story-h">A tiny kitchen above Yonge St.</h2>
+        <p class="lead">Gracie's Kitchen is a small kitchen above Yonge St in Toronto. Every cup is layered by hand in small batches, so it's always fresh.</p>
+        <p class="muted">And Gracie? She's the inspiration, and the real boss of the kitchen.</p>
+      </div>
+      <svg class="story-mark" viewBox="0 0 260 260" role="img" aria-label="Gracie's Kitchen GK mark"><rect width="260" height="260" rx="130" fill="#4a2c1c"/><circle cx="130" cy="130" r="100" fill="none" stroke="#f2a46b" stroke-width="6"/><text x="130" y="158" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="96" fill="#fff3e6" letter-spacing="-4">GK</text></svg>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-h">
+    <div class="inner">
+      <div class="sec-head">
+        <div class="eyebrow">Questions</div>
+        <h2 id="faq-h">Good questions.</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Where's your store?</summary><p>We don't have one. We pop up around Yonge St and do pickups. Follow @greycie_kitchen to see where we'll be.</p></details>
+        <details><summary>How far ahead should I order?</summary><p>Message us as early as you can. Every batch is made fresh, so we plan around your order.</p></details>
+        <details><summary>Is there coffee or alcohol in it?</summary><p>Neither.</p></details>
+        <details><summary>Is it gluten-free?</summary><p>No. The ladyfingers and Biscoff contain wheat.</p></details>
+        <details><summary>Is it vegetarian? Halal?</summary><p>It's vegetarian, with no gelatin. No pork and no alcohol, but it isn't halal-certified.</p></details>
+        <details><summary>How long does it keep?</summary><p>Keep it in the fridge and enjoy it within 2 days.</p></details>
+        <details><summary>Do you deliver?</summary><p>Message us on Instagram and we'll work out pickup or delivery.</p></details>
+        <details><summary>Do you do catering or large orders?</summary><p>Yes. Message us with the date and how many people.</p></details>
+        <details><summary>How can I pay?</summary><p>Cash, debit, Visa, Mastercard or American Express.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="cta-band">
+  <div class="inner">
+    <div style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+      <h2>Want a cup?</h2>
+      <p>$8 a cup, 2 for $15. Message us and we'll set it aside.</p>
+    </div>
+    <a class="btn primary" href="https://ig.me/m/greycie_kitchen" target="_blank" rel="noopener">Order on Instagram</a>
+  </div>
 </div>
+
+<footer>
+  <div class="inner">
+    <span>© 2026 Gracie's Kitchen · Toronto</span>
+    <a href="https://www.instagram.com/greycie_kitchen/" target="_blank" rel="noopener">Instagram @greycie_kitchen</a>
+  </div>
+</footer>
 
 <script>
 (function () {
@@ -232,7 +349,7 @@ footer { border-top: 2px solid var(--cocoa); padding-top: 16px; display: flex; j
     function selectIt() {
       var r = document.createRange(); r.selectNodeContents(code);
       var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-      status.textContent = 'Selected. Copy it from your menu.';
+      status.textContent = 'Selected';
     }
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText('@greycie_kitchen').then(function () { status.textContent = 'Copied'; }, selectIt);
